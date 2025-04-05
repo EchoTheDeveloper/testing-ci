@@ -21,6 +21,12 @@ jobs:
           cmake ..
           make
 
+      - name: Upload build artifact (Linux)
+        uses: actions/upload-artifact@v3
+        with:
+          name: linux-build
+          path: build/
+
   build-windows:
     name: Build on Windows
     runs-on: windows-latest
@@ -35,4 +41,10 @@ jobs:
           cd build
           cmake ..
           cmake --build . --config Release
+
+      - name: Upload build artifact (Windows)
+        uses: actions/upload-artifact@v3
+        with:
+          name: windows-build
+          path: build/
 
