@@ -22,7 +22,7 @@ jobs:
           make
 
       - name: Upload build artifact (Linux)
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: linux-build
           path: build/
@@ -43,7 +43,7 @@ jobs:
           cmake --build . --config Release
 
       - name: Upload build artifact (Windows)
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: windows-build
           path: build/
